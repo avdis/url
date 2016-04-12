@@ -1,5 +1,5 @@
-var $ = require('jquery');
 var defaults = require('./defaults');
+var extend = require('extend');
 
 /**
  * handles all url operations
@@ -12,7 +12,7 @@ var Url = function() {
   this.routes;
 
   if (typeof phpUrl !== 'undefined') {
-    this.setup(phpUrl);
+    this.setup(urlOptions);
   };
 };
 
@@ -20,7 +20,7 @@ var Url = function() {
  * option for manual setup upon inclusion
  */
 Url.prototype.setup = function(options) {
-  this.options = $.extend(defaults, options);
+  this.options = extend(defaults, options);
 };
 
 /**
