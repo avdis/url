@@ -1,16 +1,12 @@
+"use strict";
+
 var defaults = require('./defaults');
-var extend = require('extend');
 
 /**
  * handles all url operations
  * phpUrl is optionally there for global setup
  */
 var Url = function() {
-  this.protocol;
-  this.base;
-  this.path;
-  this.routes;
-
   if (typeof phpUrl !== 'undefined') {
     this.setup(urlOptions);
   };
@@ -20,7 +16,10 @@ var Url = function() {
  * option for manual setup upon inclusion
  */
 Url.prototype.setup = function(options) {
-  this.options = extend(defaults, options);
+  this.protocol = options.protocol;
+  this.base = options.base;
+  this.path = options.path;
+  this.routes = options.routes;
 };
 
 /**
@@ -59,7 +58,9 @@ Url.prototype.generate = function(key, config) {
   };
 
   // pass base plus route
-  return this.getBase(route).replace('//', '/');
+  var baseRoute = (this.base + route);
+  baseRoute = baseRoute.replace('//', '/');
+  return this.protocol + baseRoute;
 };
 
 /**
