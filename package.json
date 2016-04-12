@@ -1,0 +1,22 @@
+{
+  "name": "mwyatt-url",
+  "version": "0.0.0",
+  "description": "url creation and redirection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwyatt/url.git"
+  },
+  "author": "Martin Wyatt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwyatt/url/issues"
+  },
+  "homepage": "https://github.com/mwyatt/url#readme",
+  "devDependencies": {
+    "jquery": "^2.2.3"
+  }
+}
