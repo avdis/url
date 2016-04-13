@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/mwyatt/url.git"
   },
-  "author": "Martin Wyatt",
+  "author": "Martin Wyatt <martin.wyatt@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mwyatt/url/issues"
