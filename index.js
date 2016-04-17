@@ -4,11 +4,11 @@ var defaults = require('./defaults');
 
 /**
  * handles all url operations
- * phpUrl is optionally there for global setup
+ * mwyattUrlDefaults is optionally there for global setup
  */
 var Url = function() {
-  if (typeof phpUrl !== 'undefined') {
-    this.setup(urlOptions);
+  if (typeof mwyattUrlDefaults !== 'undefined') {
+    this.setup(mwyattUrlDefaults);
   };
 };
 
